@@ -9,7 +9,10 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package arithmetic ;import (_d "bytes";_de "github.com/unidoc/unipdf/v3/common";_bb "github.com/unidoc/unipdf/v3/internal/jbig2/bitmap";_e "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_c "io";);func (_bac *Encoder )code0 (_cbb *codingContext ,_ae uint32 ,_aab uint16 ,_be byte ){if _cbb .mps (_ae )==0{_bac .codeMPS (_cbb ,_ae ,_aab ,_be );
+package arithmetic ;import (_d "bytes";
+	_de "github.com/magnus195/unipdf/v3/common";
+	_bb "github.com/magnus195/unipdf/v3/internal/jbig2/bitmap";
+	_e "github.com/magnus195/unipdf/v3/internal/jbig2/errors";_c "io";);func (_bac *Encoder )code0 (_cbb *codingContext ,_ae uint32 ,_aab uint16 ,_be byte ){if _cbb .mps (_ae )==0{_bac .codeMPS (_cbb ,_ae ,_aab ,_be );
 }else {_bac .codeLPS (_cbb ,_ae ,_aab ,_be );};};func (_cga *Encoder )emit (){if _cga ._ec ==_efa {_cga ._bbc =append (_cga ._bbc ,_cga ._gea );_cga ._gea =make ([]byte ,_efa );_cga ._ec =0;};_cga ._gea [_cga ._ec ]=_cga ._aa ;_cga ._ec ++;};func (_aac *Encoder )Final (){_aac .flush ()};
 type intEncRangeS struct{_fc ,_da int ;_g ,_fe uint8 ;_a uint16 ;_ag uint8 ;};func (_fb *Encoder )Flush (){_fb ._ec =0;_fb ._bbc =nil ;_fb ._bae =-1};func New ()*Encoder {_dee :=&Encoder {};_dee .Init ();return _dee };type codingContext struct{_ba []byte ;
 _ca []byte ;};type Encoder struct{_fed uint32 ;_db uint16 ;_ded ,_aa uint8 ;_bae int ;_cacg int ;_bbc [][]byte ;_gea []byte ;_ec int ;_eg *codingContext ;_bf [13]*codingContext ;_dd *codingContext ;};func (_efc *Encoder )Reset (){_efc ._db =0x8000;_efc ._fed =0;

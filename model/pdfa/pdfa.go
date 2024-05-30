@@ -14,9 +14,20 @@
 //
 //	Keep in mind that it might change in the subsequent minor versions.
 package pdfa ;import (_c "errors";_g "fmt";_aaa "github.com/adrg/sysfont";_cg "github.com/trimmer-io/go-xmp/models/dc";_ca "github.com/trimmer-io/go-xmp/models/pdf";_f "github.com/trimmer-io/go-xmp/models/xmp_base";_e "github.com/trimmer-io/go-xmp/models/xmp_mm";
-_da "github.com/trimmer-io/go-xmp/models/xmp_rights";_gf "github.com/trimmer-io/go-xmp/xmp";_ge "github.com/unidoc/unipdf/v3/common";_fe "github.com/unidoc/unipdf/v3/contentstream";_gc "github.com/unidoc/unipdf/v3/core";_cgc "github.com/unidoc/unipdf/v3/internal/cmap";
-_cb "github.com/unidoc/unipdf/v3/internal/imageutil";_fc "github.com/unidoc/unipdf/v3/internal/timeutils";_d "github.com/unidoc/unipdf/v3/model";_eb "github.com/unidoc/unipdf/v3/model/internal/colorprofile";_fcf "github.com/unidoc/unipdf/v3/model/internal/docutil";
-_ag "github.com/unidoc/unipdf/v3/model/internal/fonts";_cd "github.com/unidoc/unipdf/v3/model/xmputil";_aae "github.com/unidoc/unipdf/v3/model/xmputil/pdfaextension";_dd "github.com/unidoc/unipdf/v3/model/xmputil/pdfaid";_ac "image/color";_aa "math";_gb "sort";
+_da "github.com/trimmer-io/go-xmp/models/xmp_rights";_gf "github.com/trimmer-io/go-xmp/xmp";
+	_ge "github.com/magnus195/unipdf/v3/common";
+	_fe "github.com/magnus195/unipdf/v3/contentstream";
+	_gc "github.com/magnus195/unipdf/v3/core";
+	_cgc "github.com/magnus195/unipdf/v3/internal/cmap";
+	_cb "github.com/magnus195/unipdf/v3/internal/imageutil";
+	_fc "github.com/magnus195/unipdf/v3/internal/timeutils";
+	_d "github.com/magnus195/unipdf/v3/model";
+	_eb "github.com/magnus195/unipdf/v3/model/internal/colorprofile";
+	_fcf "github.com/magnus195/unipdf/v3/model/internal/docutil";
+	_ag "github.com/magnus195/unipdf/v3/model/internal/fonts";
+	_cd "github.com/magnus195/unipdf/v3/model/xmputil";
+	_aae "github.com/magnus195/unipdf/v3/model/xmputil/pdfaextension";
+	_dd "github.com/magnus195/unipdf/v3/model/xmputil/pdfaid";_ac "image/color";_aa "math";_gb "sort";
 _ad "strings";_ga "time";);func _fdbb (_gdac *_d .CompliancePdfReader )ViolatedRule {for _ ,_fgf :=range _gdac .GetObjectNums (){_fgec ,_deee :=_gdac .GetIndirectObjectByNumber (_fgf );if _deee !=nil {continue ;};_daefd ,_bdfe :=_gc .GetStream (_fgec );
 if !_bdfe {continue ;};_cdgb ,_bdfe :=_gc .GetName (_daefd .Get ("\u0054\u0079\u0070\u0065"));if !_bdfe {continue ;};if *_cdgb !="\u0058O\u0062\u006a\u0065\u0063\u0074"{continue ;};if _daefd .Get ("\u0053\u004d\u0061s\u006b")!=nil {return _fdb ("\u0036\u002e\u0034-\u0032","\u0041\u006e\u0020\u0058\u004f\u0062\u006a\u0065\u0063\u0074\u0020\u0064\u0069\u0063\u0074i\u006f\u006e\u0061\u0072\u0079\u0020\u0073\u0068\u0061\u006c\u006c\u0020\u006eo\u0074\u0020\u0063\u006f\u006e\u0074\u0061\u0069\u006e\u0020\u0074\u0068e \u0053\u004d\u0061\u0073\u006b\u0020\u006b\u0065\u0079\u002e");
 };};return _aag ;};func _geeg (_agbg *_fcf .Document ,_dcg int )error {for _ ,_dba :=range _agbg .Objects {_dce ,_gbcc :=_gc .GetDict (_dba );if !_gbcc {continue ;};_ecd :=_dce .Get ("\u0054\u0079\u0070\u0065");if _ecd ==nil {continue ;};if _ggag ,_fcdb :=_gc .GetName (_ecd );

@@ -9,7 +9,9 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package imageutil ;import (_gc "encoding/binary";_a "errors";_f "fmt";_ee "github.com/unidoc/unipdf/v3/common";_b "github.com/unidoc/unipdf/v3/internal/bitwise";_e "image";_c "image/color";_cc "image/draw";_g "math";);func (_edcc *Gray8 )ColorAt (x ,y int )(_c .Color ,error ){return ColorAtGray8BPC (x ,y ,_edcc .BytesPerLine ,_edcc .Data ,_edcc .Decode );
+package imageutil ;import (_gc "encoding/binary";_a "errors";_f "fmt";
+	_ee "github.com/magnus195/unipdf/v3/common";
+	_b "github.com/magnus195/unipdf/v3/internal/bitwise";_e "image";_c "image/color";_cc "image/draw";_g "math";);func (_edcc *Gray8 )ColorAt (x ,y int )(_c .Color ,error ){return ColorAtGray8BPC (x ,y ,_edcc .BytesPerLine ,_edcc .Data ,_edcc .Decode );
 };func _gcb (_acga Gray ,_eceg NRGBA ,_ddf _e .Rectangle ){for _cgcc :=0;_cgcc < _ddf .Max .X ;_cgcc ++{for _ffc :=0;_ffc < _ddf .Max .Y ;_ffc ++{_ead :=_eegb (_eceg .NRGBAAt (_cgcc ,_ffc ));_acga .SetGray (_cgcc ,_ffc ,_ead );};};};func FromGoImage (i _e .Image )(Image ,error ){switch _aabg :=i .(type ){case Image :return _aabg .Copy (),nil ;
 case Gray :return GrayConverter .Convert (i );case *_e .Gray16 :return Gray16Converter .Convert (i );case CMYK :return CMYKConverter .Convert (i );case *_e .NRGBA64 :return NRGBA64Converter .Convert (i );default:return NRGBAConverter .Convert (i );};};
 func (_egad *Gray4 )Validate ()error {if len (_egad .Data )!=_egad .Height *_egad .BytesPerLine {return ErrInvalidImage ;};return nil ;};func _gfc (_eacga *Monochrome ,_gfa int ,_edfa []byte )(_fdg *Monochrome ,_bfe error ){const _gfag ="\u0072\u0065d\u0075\u0063\u0065R\u0061\u006e\u006b\u0042\u0069\u006e\u0061\u0072\u0079";

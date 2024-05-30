@@ -9,8 +9,13 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package redactor ;import (_cg "errors";_g "fmt";_f "github.com/unidoc/unipdf/v3/common";_be "github.com/unidoc/unipdf/v3/contentstream";_fg "github.com/unidoc/unipdf/v3/core";_fa "github.com/unidoc/unipdf/v3/creator";_cf "github.com/unidoc/unipdf/v3/extractor";
-_dd "github.com/unidoc/unipdf/v3/model";_bb "io";_b "regexp";_d "sort";_a "strings";);func _gdg (_df *_cf .TextMarkArray )int {_gc :=0;_caf :=_df .Elements ();if _caf [0].Text =="\u0020"{_gc ++;};if _caf [_df .Len ()-1].Text =="\u0020"{_gc ++;};return _gc ;
+package redactor ;import (_cg "errors";_g "fmt";
+	_f "github.com/magnus195/unipdf/v3/common";
+	_be "github.com/magnus195/unipdf/v3/contentstream";
+	_fg "github.com/magnus195/unipdf/v3/core";
+	_fa "github.com/magnus195/unipdf/v3/creator";
+	_cf "github.com/magnus195/unipdf/v3/extractor";
+	_dd "github.com/magnus195/unipdf/v3/model";_bb "io";_b "regexp";_d "sort";_a "strings";);func _gdg (_df *_cf .TextMarkArray )int {_gc :=0;_caf :=_df .Elements ();if _caf [0].Text =="\u0020"{_gc ++;};if _caf [_df .Len ()-1].Text =="\u0020"{_gc ++;};return _gc ;
 };
 
 // RedactionTerm holds the regexp pattern and the replacement string for the redaction process.

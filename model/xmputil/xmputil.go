@@ -10,8 +10,12 @@
 // terms that can be accessed at https://unidoc.io/eula/
 
 // Package xmputil provides abstraction used by the pdf document XMP Metadata.
-package xmputil ;import (_e "errors";_ad "fmt";_b "github.com/trimmer-io/go-xmp/models/pdf";_g "github.com/trimmer-io/go-xmp/models/xmp_base";_ab "github.com/trimmer-io/go-xmp/models/xmp_mm";_d "github.com/trimmer-io/go-xmp/xmp";_ca "github.com/unidoc/unipdf/v3/core";
-_f "github.com/unidoc/unipdf/v3/internal/timeutils";_de "github.com/unidoc/unipdf/v3/internal/uuid";_eb "github.com/unidoc/unipdf/v3/model/xmputil/pdfaextension";_ef "github.com/unidoc/unipdf/v3/model/xmputil/pdfaid";_da "strconv";_c "time";);
+package xmputil ;import (_e "errors";_ad "fmt";_b "github.com/trimmer-io/go-xmp/models/pdf";_g "github.com/trimmer-io/go-xmp/models/xmp_base";_ab "github.com/trimmer-io/go-xmp/models/xmp_mm";_d "github.com/trimmer-io/go-xmp/xmp";
+	_ca "github.com/magnus195/unipdf/v3/core";
+	_f "github.com/magnus195/unipdf/v3/internal/timeutils";
+	_de "github.com/magnus195/unipdf/v3/internal/uuid";
+	_eb "github.com/magnus195/unipdf/v3/model/xmputil/pdfaextension";
+	_ef "github.com/magnus195/unipdf/v3/model/xmputil/pdfaid";_da "strconv";_c "time";);
 
 // SetPdfAExtension sets the pdfaExtension XMP metadata.
 func (_af *Document )SetPdfAExtension ()error {_ag ,_eg :=_eb .MakeModel (_af ._bc );if _eg !=nil {return _eg ;};if _eg =_eb .FillModel (_af ._bc ,_ag );_eg !=nil {return _eg ;};if _eg =_ag .SyncToXMP (_af ._bc );_eg !=nil {return _eg ;};return nil ;};

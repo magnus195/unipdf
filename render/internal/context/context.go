@@ -9,8 +9,12 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package context ;import (_fa "errors";_be "github.com/unidoc/freetype/truetype";_ff "github.com/unidoc/unipdf/v3/core";_a "github.com/unidoc/unipdf/v3/internal/cmap";_ef "github.com/unidoc/unipdf/v3/internal/textencoding";_ea "github.com/unidoc/unipdf/v3/internal/transform";
-_bc "github.com/unidoc/unipdf/v3/model";_d "golang.org/x/image/font";_c "image";_f "image/color";_b "strings";);type TextRenderingMode int ;func (_gfc *TextState )ProcQ (data []byte ,ctx Context ){_gfc .ProcTStar ();_gfc .ProcTj (data ,ctx )};type Context interface{Push ();
+package context ;import (_fa "errors";_be "github.com/unidoc/freetype/truetype";
+	_ff "github.com/magnus195/unipdf/v3/core";
+	_a "github.com/magnus195/unipdf/v3/internal/cmap";
+	_ef "github.com/magnus195/unipdf/v3/internal/textencoding";
+	_ea "github.com/magnus195/unipdf/v3/internal/transform";
+	_bc "github.com/magnus195/unipdf/v3/model";_d "golang.org/x/image/font";_c "image";_f "image/color";_b "strings";);type TextRenderingMode int ;func (_gfc *TextState )ProcQ (data []byte ,ctx Context ){_gfc .ProcTStar ();_gfc .ProcTj (data ,ctx )};type Context interface{Push ();
 Pop ();Matrix ()_ea .Matrix ;SetMatrix (_g _ea .Matrix );Translate (_bcd ,_ec float64 );Scale (_dd ,_bcg float64 );Rotate (_ae float64 );MoveTo (_ecc ,_aa float64 );LineTo (_ga ,_eff float64 );CubicTo (_eb ,_bf ,_ee ,_fg ,_bg ,_bfd float64 );QuadraticTo (_fe ,_cc ,_eg ,_fba float64 );
 NewSubPath ();ClosePath ();ClearPath ();Clip ();ClipPreserve ();ResetClip ();LineWidth ()float64 ;SetLineWidth (_gf float64 );SetLineCap (_gd LineCap );SetLineJoin (_eef LineJoin );SetDash (_dg ...float64 );SetDashOffset (_dfe float64 );Fill ();FillPreserve ();
 Stroke ();StrokePreserve ();SetRGBA (_ce ,_ba ,_aab ,_bgb float64 );SetFillRGBA (_da ,_ece ,_ecb ,_cd float64 );SetFillStyle (_dag Pattern );SetFillRule (_fgb FillRule );SetStrokeRGBA (_cg ,_dfd ,_ffc ,_bff float64 );SetStrokeStyle (_dac Pattern );FillPattern ()Pattern ;

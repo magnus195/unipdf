@@ -9,7 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package pdfaid ;import (_g "fmt";_e "github.com/trimmer-io/go-xmp/xmp";_gc "github.com/unidoc/unipdf/v3/model/xmputil/pdfaextension";);var Namespace =_e .NewNamespace ("\u0070\u0064\u0066\u0061\u0069\u0064","\u0068\u0074\u0074p\u003a\u002f\u002f\u0077w\u0077\u002e\u0061\u0069\u0069\u006d\u002eo\u0072\u0067\u002f\u0070\u0064\u0066\u0061\u002f\u006e\u0073\u002f\u0069\u0064\u002f",NewModel );
+package pdfaid ;import (_g "fmt";_e "github.com/trimmer-io/go-xmp/xmp";
+	_gc "github.com/magnus195/unipdf/v3/model/xmputil/pdfaextension";);var Namespace =_e .NewNamespace ("\u0070\u0064\u0066\u0061\u0069\u0064","\u0068\u0074\u0074p\u003a\u002f\u002f\u0077w\u0077\u002e\u0061\u0069\u0069\u006d\u002eo\u0072\u0067\u002f\u0070\u0064\u0066\u0061\u002f\u006e\u0073\u002f\u0069\u0064\u002f",NewModel );
 func init (){_e .Register (Namespace ,_e .XmpMetadata );_gc .RegisterSchema (Namespace ,&Schema )};
 
 // Model is the XMP model for the PdfA metadata.

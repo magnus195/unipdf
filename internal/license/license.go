@@ -10,7 +10,8 @@
 // terms that can be accessed at https://unidoc.io/eula/
 
 package license ;import (_ac "bytes";_b "compress/gzip";_e "crypto";_cbd "crypto/aes";_ec "crypto/cipher";_dgb "crypto/hmac";_ea "crypto/rand";_fgd "crypto/rsa";_dg "crypto/sha256";_eaf "crypto/sha512";_df "crypto/x509";_fb "encoding/base64";_ab "encoding/hex";
-_db "encoding/json";_fd "encoding/pem";_fc "errors";_aeg "fmt";_gf "github.com/unidoc/unipdf/v3/common";_d "io";_dd "io/ioutil";_fg "net";_ae "net/http";_f "os";_g "path/filepath";_c "sort";_eff "strings";_ef "sync";_cb "time";);var _bgc =_cb .Date (2019,6,6,0,0,0,0,_cb .UTC );
+_db "encoding/json";_fd "encoding/pem";_fc "errors";_aeg "fmt";
+	_gf "github.com/magnus195/unipdf/v3/common";_d "io";_dd "io/ioutil";_fg "net";_ae "net/http";_f "os";_g "path/filepath";_c "sort";_eff "strings";_ef "sync";_cb "time";);var _bgc =_cb .Date (2019,6,6,0,0,0,0,_cb .UTC );
 func MakeUnlicensedKey ()*LicenseKey {_ddb :=LicenseKey {};_ddb .CustomerName ="\u0055\u006e\u006c\u0069\u0063\u0065\u006e\u0073\u0065\u0064";_ddb .Tier =LicenseTierBusiness ;_ddb .CreatedAt =_cb .Now ().UTC ();_ddb .CreatedAtInt =_ddb .CreatedAt .Unix ();
 return &_ddb ;};type meteredClient struct{_bbc string ;_gb string ;_af *_ae .Client ;};var _cea map[string ]int ;func _ddg (_ecbg string ,_dc string )([]byte ,error ){var (_eec int ;_fbb string ;);for _ ,_fbb =range []string {"\u000a\u002b\u000a","\u000d\u000a\u002b\r\u000a","\u0020\u002b\u0020"}{if _eec =_eff .Index (_dc ,_fbb );
 _eec !=-1{break ;};};if _eec ==-1{return nil ,_aeg .Errorf ("\u0069\u006e\u0076al\u0069\u0064\u0020\u0069\u006e\u0070\u0075\u0074\u002c \u0073i\u0067n\u0061t\u0075\u0072\u0065\u0020\u0073\u0065\u0070\u0061\u0072\u0061\u0074\u006f\u0072");};_ba :=_dc [:_eec ];

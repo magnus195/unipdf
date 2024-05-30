@@ -9,7 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package mdp ;import (_b "errors";_g "fmt";_a "github.com/unidoc/unipdf/v3/core";);
+package mdp ;import (_b "errors";_g "fmt";
+	_a "github.com/magnus195/unipdf/v3/core";);
 
 // DiffPolicy interface for comparing two revisions of the Pdf document.
 type DiffPolicy interface{

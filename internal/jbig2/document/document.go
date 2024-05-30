@@ -9,8 +9,14 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package document ;import (_b "encoding/binary";_eb "fmt";_ec "github.com/unidoc/unipdf/v3/common";_ab "github.com/unidoc/unipdf/v3/internal/bitwise";_af "github.com/unidoc/unipdf/v3/internal/jbig2/basic";_g "github.com/unidoc/unipdf/v3/internal/jbig2/bitmap";
-_ef "github.com/unidoc/unipdf/v3/internal/jbig2/document/segments";_aa "github.com/unidoc/unipdf/v3/internal/jbig2/encoder/classer";_abc "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_ee "io";_e "math";_bg "runtime/debug";);func (_cc *Document )GetNumberOfPages ()(uint32 ,error ){if _cc .NumberOfPagesUnknown ||_cc .NumberOfPages ==0{if len (_cc .Pages )==0{if _bdd :=_cc .mapData ();
+package document ;import (_b "encoding/binary";_eb "fmt";
+	_ec "github.com/magnus195/unipdf/v3/common";
+	_ab "github.com/magnus195/unipdf/v3/internal/bitwise";
+	_af "github.com/magnus195/unipdf/v3/internal/jbig2/basic";
+	_g "github.com/magnus195/unipdf/v3/internal/jbig2/bitmap";
+	_ef "github.com/magnus195/unipdf/v3/internal/jbig2/document/segments";
+	_aa "github.com/magnus195/unipdf/v3/internal/jbig2/encoder/classer";
+	_abc "github.com/magnus195/unipdf/v3/internal/jbig2/errors";_ee "io";_e "math";_bg "runtime/debug";);func (_cc *Document )GetNumberOfPages ()(uint32 ,error ){if _cc .NumberOfPagesUnknown ||_cc .NumberOfPages ==0{if len (_cc .Pages )==0{if _bdd :=_cc .mapData ();
 _bdd !=nil {return 0,_abc .Wrap (_bdd ,"\u0044o\u0063\u0075\u006d\u0065n\u0074\u002e\u0047\u0065\u0074N\u0075m\u0062e\u0072\u004f\u0066\u0050\u0061\u0067\u0065s","");};};return uint32 (len (_cc .Pages )),nil ;};return _cc .NumberOfPages ,nil ;};func (_gd *Document )AddGenericPage (bm *_g .Bitmap ,duplicateLineRemoval bool )(_bb error ){const _ce ="\u0044\u006f\u0063um\u0065\u006e\u0074\u002e\u0041\u0064\u0064\u0047\u0065\u006e\u0065\u0072\u0069\u0063\u0050\u0061\u0067\u0065";
 if !_gd .FullHeaders &&_gd .NumberOfPages !=0{return _abc .Error (_ce ,"\u0064\u006f\u0063\u0075\u006de\u006e\u0074\u0020\u0061\u006c\u0072\u0065a\u0064\u0079\u0020\u0063\u006f\u006e\u0074\u0061\u0069\u006e\u0073\u0020\u0070\u0061\u0067\u0065\u002e\u0020\u0046\u0069\u006c\u0065\u004d\u006f\u0064\u0065\u0020\u0064\u0069\u0073\u0061\u006c\u006c\u006f\u0077\u0073\u0020\u0061\u0064\u0064i\u006e\u0067\u0020\u006d\u006f\u0072\u0065\u0020\u0074\u0068\u0061\u006e \u006f\u006e\u0065\u0020\u0070\u0061g\u0065");
 };_abg :=&Page {Segments :[]*_ef .Header {},Bitmap :bm ,Document :_gd ,FinalHeight :bm .Height ,FinalWidth :bm .Width ,IsLossless :true ,BlackIsOne :bm .Color ==_g .Chocolate };_abg .PageNumber =int (_gd .nextPageNumber ());_gd .Pages [_abg .PageNumber ]=_abg ;

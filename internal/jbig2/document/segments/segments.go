@@ -9,9 +9,17 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package segments ;import (_bf "encoding/binary";_bd "errors";_fc "fmt";_dd "github.com/unidoc/unipdf/v3/common";_ab "github.com/unidoc/unipdf/v3/internal/bitwise";_aa "github.com/unidoc/unipdf/v3/internal/jbig2/basic";_fa "github.com/unidoc/unipdf/v3/internal/jbig2/bitmap";
-_bb "github.com/unidoc/unipdf/v3/internal/jbig2/decoder/arithmetic";_af "github.com/unidoc/unipdf/v3/internal/jbig2/decoder/huffman";_fca "github.com/unidoc/unipdf/v3/internal/jbig2/decoder/mmr";_bcc "github.com/unidoc/unipdf/v3/internal/jbig2/encoder/arithmetic";
-_bc "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_abb "github.com/unidoc/unipdf/v3/internal/jbig2/internal";_f "image";_b "io";_d "math";_be "strings";_c "time";);func (_fdfbf *Header )writeSegmentDataLength (_eac _ab .BinaryWriter )(_dgcg int ,_dbgf error ){_fgdf :=make ([]byte ,4);
+package segments ;import (_bf "encoding/binary";_bd "errors";_fc "fmt";
+	_dd "github.com/magnus195/unipdf/v3/common";
+	_ab "github.com/magnus195/unipdf/v3/internal/bitwise";
+	_aa "github.com/magnus195/unipdf/v3/internal/jbig2/basic";
+	_fa "github.com/magnus195/unipdf/v3/internal/jbig2/bitmap";
+	_bb "github.com/magnus195/unipdf/v3/internal/jbig2/decoder/arithmetic";
+	_af "github.com/magnus195/unipdf/v3/internal/jbig2/decoder/huffman";
+	_fca "github.com/magnus195/unipdf/v3/internal/jbig2/decoder/mmr";
+	_bcc "github.com/magnus195/unipdf/v3/internal/jbig2/encoder/arithmetic";
+	_bc "github.com/magnus195/unipdf/v3/internal/jbig2/errors";
+	_abb "github.com/magnus195/unipdf/v3/internal/jbig2/internal";_f "image";_b "io";_d "math";_be "strings";_c "time";);func (_fdfbf *Header )writeSegmentDataLength (_eac _ab .BinaryWriter )(_dgcg int ,_dbgf error ){_fgdf :=make ([]byte ,4);
 _bf .BigEndian .PutUint32 (_fgdf ,uint32 (_fdfbf .SegmentDataLength ));if _dgcg ,_dbgf =_eac .Write (_fgdf );_dbgf !=nil {return 0,_bc .Wrap (_dbgf ,"\u0048\u0065a\u0064\u0065\u0072\u002e\u0077\u0072\u0069\u0074\u0065\u0053\u0065\u0067\u006d\u0065\u006e\u0074\u0044\u0061\u0074\u0061\u004c\u0065ng\u0074\u0068","");
 };return _dgcg ,nil ;};func (_fgcc *HalftoneRegion )GetRegionInfo ()*RegionSegment {return _fgcc .RegionSegment };func (_bgf *PageInformationSegment )Init (h *Header ,r *_ab .Reader )(_gdgb error ){_bgf ._egcc =r ;if _gdgb =_bgf .parseHeader ();_gdgb !=nil {return _bc .Wrap (_gdgb ,"P\u0061\u0067\u0065\u0049\u006e\u0066o\u0072\u006d\u0061\u0074\u0069\u006f\u006e\u0053\u0065g\u006d\u0065\u006et\u002eI\u006e\u0069\u0074","");
 };return nil ;};func (_aeee *TableSegment )HtRS ()int32 {return _aeee ._efeg };func (_fbfg *GenericRegion )setParametersWithAt (_edcf bool ,_bfd byte ,_gge ,_gaff bool ,_bddd ,_ebgf []int8 ,_acfd ,_dec uint32 ,_fdag *_bb .DecoderStats ,_fgf *_bb .Decoder ){_fbfg .IsMMREncoded =_edcf ;

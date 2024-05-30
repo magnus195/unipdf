@@ -9,7 +9,9 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package crypt ;import (_b "crypto/aes";_c "crypto/cipher";_e "crypto/md5";_gd "crypto/rand";_af "crypto/rc4";_ga "fmt";_cc "github.com/unidoc/unipdf/v3/common";_bb "github.com/unidoc/unipdf/v3/core/security";_a "io";);func init (){_gdb ("\u0041\u0045\u0053V\u0032",_bc )};
+package crypt ;import (_b "crypto/aes";_c "crypto/cipher";_e "crypto/md5";_gd "crypto/rand";_af "crypto/rc4";_ga "fmt";
+	_cc "github.com/magnus195/unipdf/v3/common";
+	_bb "github.com/magnus195/unipdf/v3/core/security";_a "io";);func init () {_gdb ("\u0041\u0045\u0053V\u0032",_bc )};
 
 
 // MakeKey implements Filter interface.

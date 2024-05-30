@@ -14,8 +14,13 @@
 // can create the appearance streams which specify the exact appearance as needed by many pdf viewers for consistent
 // appearance of the annotations.
 // It also contains methods for generating appearance streams for fields via widget annotations.
-package annotator ;import (_b "bytes";_f "errors";_d "github.com/unidoc/unipdf/v3/common";_g "github.com/unidoc/unipdf/v3/contentstream";_ac "github.com/unidoc/unipdf/v3/contentstream/draw";_gd "github.com/unidoc/unipdf/v3/core";_ad "github.com/unidoc/unipdf/v3/internal/textencoding";
-_ff "github.com/unidoc/unipdf/v3/model";_da "image";_eg "math";_e "strings";_af "unicode";);func _ebb (_eec *_ff .PdfField ,_aaf ,_ffa float64 ,_egea string ,_gfg AppearanceStyle ,_dba *_g .ContentStreamOperations ,_egb *_ff .PdfPageResources ,_eeab *_gd .PdfObjectDictionary )(*_ff .XObjectForm ,error ){_fff :=_ff .NewPdfPageResources ();
+package annotator ;import (_b "bytes";_f "errors";
+	_d "github.com/magnus195/unipdf/v3/common";
+	_g "github.com/magnus195/unipdf/v3/contentstream";
+	_ac "github.com/magnus195/unipdf/v3/contentstream/draw";
+	_gd "github.com/magnus195/unipdf/v3/core";
+	_ad "github.com/magnus195/unipdf/v3/internal/textencoding";
+	_ff "github.com/magnus195/unipdf/v3/model";_da "image";_eg "math";_e "strings";_af "unicode";);func _ebb (_eec *_ff .PdfField ,_aaf ,_ffa float64 ,_egea string ,_gfg AppearanceStyle ,_dba *_g .ContentStreamOperations ,_egb *_ff .PdfPageResources ,_eeab *_gd .PdfObjectDictionary )(*_ff .XObjectForm ,error ){_fff :=_ff .NewPdfPageResources ();
 _gdg ,_geee :=_aaf ,_ffa ;_edga :=_g .NewContentCreator ();if _gfg .BorderSize > 0{_bcb (_edga ,_gfg ,_aaf ,_ffa );};if _gfg .DrawAlignmentReticle {_cgce :=_gfg ;_cgce .BorderSize =0.2;_gggbg (_edga ,_cgce ,_aaf ,_ffa );};_edga .Add_BMC ("\u0054\u0078");
 _edga .Add_q ();_edga .Add_BT ();_aaf ,_ffa =_gfg .applyRotation (_eeab ,_aaf ,_ffa ,_edga );_beg ,_adbc ,_aabg :=_gfg .processDA (_eec ,_dba ,_egb ,_fff ,_edga );if _aabg !=nil {return nil ,_aabg ;};_eacf :=_beg .Font ;_aggg :=_beg .Size ;_fffe :=_gd .MakeName (_beg .Name );
 _eaf :=_aggg ==0;if _eaf &&_adbc {_aggg =_ffa *_gfg .AutoFontSizeFraction ;};_ebaf :=_eacf .Encoder ();if _ebaf ==nil {_d .Log .Debug ("\u0057\u0041RN\u003a\u0020\u0066\u006f\u006e\u0074\u0020\u0065\u006e\u0063\u006f\u0064\u0065\u0072\u0020\u0069\u0073\u0020\u006e\u0069l\u002e\u0020\u0041\u0073s\u0075\u006d\u0069\u006eg \u0069\u0064e\u006et\u0069\u0074\u0079\u0020\u0065\u006ec\u006f\u0064\u0065r\u002e\u0020O\u0075\u0074\u0070\u0075\u0074\u0020\u006d\u0061\u0079\u0020\u0062\u0065\u0020\u0069n\u0063\u006f\u0072\u0072\u0065\u0063\u0074\u002e");

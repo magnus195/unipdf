@@ -9,7 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package transform ;import (_g "fmt";_d "github.com/unidoc/unipdf/v3/common";_cc "math";);func (_dda Point )Distance (b Point )float64 {return _cc .Hypot (_dda .X -b .X ,_dda .Y -b .Y )};func NewMatrixFromTransforms (xScale ,yScale ,theta ,tx ,ty float64 )Matrix {return IdentityMatrix ().Scale (xScale ,yScale ).Rotate (theta ).Translate (tx ,ty );
+package transform ;import (_g "fmt";
+	_d "github.com/magnus195/unipdf/v3/common";_cc "math";);func (_dda Point )Distance (b Point )float64 {return _cc .Hypot (_dda .X -b .X ,_dda .Y -b .Y )};func NewMatrixFromTransforms (xScale ,yScale ,theta ,tx ,ty float64 )Matrix {return IdentityMatrix ().Scale (xScale ,yScale ).Rotate (theta ).Translate (tx ,ty );
 };func TranslationMatrix (tx ,ty float64 )Matrix {return NewMatrix (1,0,0,1,tx ,ty )};func (_bcb Matrix )Scale (xScale ,yScale float64 )Matrix {return _bcb .Mult (ScaleMatrix (xScale ,yScale ));};func (_dc Matrix )Identity ()bool {return _dc [0]==1&&_dc [1]==0&&_dc [2]==0&&_dc [3]==0&&_dc [4]==1&&_dc [5]==0&&_dc [6]==0&&_dc [7]==0&&_dc [8]==1;
 };func (_gab *Point )Transform (a ,b ,c ,d ,tx ,ty float64 ){_bad :=NewMatrix (a ,b ,c ,d ,tx ,ty );_gab .transformByMatrix (_bad );};const _bg =1e-6;func (_ecd Point )String ()string {return _g .Sprintf ("(\u0025\u002e\u0032\u0066\u002c\u0025\u002e\u0032\u0066\u0029",_ecd .X ,_ecd .Y );
 };func (_efa Matrix )Inverse ()(Matrix ,bool ){_acd ,_bae :=_efa [0],_efa [1];_db ,_cf :=_efa [3],_efa [4];_gg ,_ab :=_efa [6],_efa [7];_adg :=_acd *_cf -_bae *_db ;if _cc .Abs (_adg )< _ea {return Matrix {},false ;};_fdd ,_ge :=_cf /_adg ,-_bae /_adg ;

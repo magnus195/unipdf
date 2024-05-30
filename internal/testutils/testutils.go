@@ -9,7 +9,9 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package testutils ;import (_cg "crypto/md5";_bg "encoding/hex";_d "errors";_e "fmt";_cge "github.com/unidoc/unipdf/v3/common";_eb "github.com/unidoc/unipdf/v3/core";_gg "image";_cdc "image/png";_gf "io";_cdg "os";_a "os/exec";_g "path/filepath";_cd "strings";
+package testutils ;import (_cg "crypto/md5";_bg "encoding/hex";_d "errors";_e "fmt";
+	_cge "github.com/magnus195/unipdf/v3/common";
+	_eb "github.com/magnus195/unipdf/v3/core";_gg "image";_cdc "image/png";_gf "io";_cdg "os";_a "os/exec";_g "path/filepath";_cd "strings";
 _b "testing";);func CopyFile (src ,dst string )error {_de ,_cgb :=_cdg .Open (src );if _cgb !=nil {return _cgb ;};defer _de .Close ();_db ,_cgb :=_cdg .Create (dst );if _cgb !=nil {return _cgb ;};defer _db .Close ();_ ,_cgb =_gf .Copy (_db ,_de );return _cgb ;
 };func RenderPDFToPNGs (pdfPath string ,dpi int ,outpathTpl string )error {if dpi <=0{dpi =100;};if _ ,_fbg :=_a .LookPath ("\u0067\u0073");_fbg !=nil {return ErrRenderNotSupported ;};return _a .Command ("\u0067\u0073","\u002d\u0073\u0044\u0045\u0056\u0049\u0043\u0045\u003d\u0070\u006e\u0067a\u006c\u0070\u0068\u0061","\u002d\u006f",outpathTpl ,_e .Sprintf ("\u002d\u0072\u0025\u0064",dpi ),pdfPath ).Run ();
 };func ParseIndirectObjects (rawpdf string )(map[int64 ]_eb .PdfObject ,error ){_fge :=_eb .NewParserFromString (rawpdf );_fba :=map[int64 ]_eb .PdfObject {};for {_eac ,_fga :=_fge .ParseIndirectObject ();if _fga !=nil {if _fga ==_gf .EOF {break ;};return nil ,_fga ;

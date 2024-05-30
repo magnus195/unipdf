@@ -9,7 +9,10 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package imagerender ;import (_f "errors";_df "fmt";_dd "github.com/unidoc/freetype/raster";_ea "github.com/unidoc/unipdf/v3/common";_eg "github.com/unidoc/unipdf/v3/internal/transform";_fg "github.com/unidoc/unipdf/v3/render/internal/context";_ce "golang.org/x/image/draw";
+package imagerender ;import (_f "errors";_df "fmt";_dd "github.com/unidoc/freetype/raster";
+	_ea "github.com/magnus195/unipdf/v3/common";
+	_eg "github.com/magnus195/unipdf/v3/internal/transform";
+	_fg "github.com/magnus195/unipdf/v3/render/internal/context";_ce "golang.org/x/image/draw";
 _bd "golang.org/x/image/font";_ceg "golang.org/x/image/math/f64";_dbf "golang.org/x/image/math/fixed";_g "image";_b "image/color";_c "image/draw";_a "math";_db "sort";_d "strings";);func NewLinearGradient (x0 ,y0 ,x1 ,y1 float64 )_fg .Gradient {_gac :=&linearGradient {_gfbb :x0 ,_acfa :y0 ,_gaac :x1 ,_cec :y1 };
 return _gac ;};func _feg (_accb _dbf .Int26_6 )float64 {const _ebac ,_dagc =6,1<<6-1;if _accb >=0{return float64 (_accb >>_ebac )+float64 (_accb &_dagc )/64;};_accb =-_accb ;if _accb >=0{return -(float64 (_accb >>_ebac )+float64 (_accb &_dagc )/64);};return 0;
 };func _fgag (_gcgd ,_abbf _b .Color ,_gfeg float64 )_b .Color {_ccfcb ,_aff ,_fbcga ,_dgb :=_gcgd .RGBA ();_bada ,_fadb ,_ebba ,_aedf :=_abbf .RGBA ();return _b .RGBA {_ggf (_ccfcb ,_bada ,_gfeg ),_ggf (_aff ,_fadb ,_gfeg ),_ggf (_fbcga ,_ebba ,_gfeg ),_ggf (_dgb ,_aedf ,_gfeg )};

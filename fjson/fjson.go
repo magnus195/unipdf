@@ -10,7 +10,10 @@
 // terms that can be accessed at https://unidoc.io/eula/
 
 // Package fjson provides support for loading PDF form field data from JSON data/files.
-package fjson ;import (_b "encoding/json";_c "github.com/unidoc/unipdf/v3/common";_f "github.com/unidoc/unipdf/v3/core";_aa "github.com/unidoc/unipdf/v3/model";_e "io";_a "os";);
+package fjson ;import (_b "encoding/json";
+	_c "github.com/magnus195/unipdf/v3/common";
+	_f "github.com/magnus195/unipdf/v3/core";
+	_aa "github.com/magnus195/unipdf/v3/model";_e "io";_a "os";);
 
 // JSON returns the field data as a string in JSON format.
 func (_ce FieldData )JSON ()(string ,error ){_egb ,_cgb :=_b .MarshalIndent (_ce ._ef ,"","\u0020\u0020\u0020\u0020");return string (_egb ),_cgb ;};

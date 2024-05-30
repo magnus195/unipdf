@@ -9,7 +9,11 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package fonts ;import (_bd "bytes";_df "encoding/binary";_a "errors";_b "fmt";_dfa "github.com/unidoc/unipdf/v3/common";_bg "github.com/unidoc/unipdf/v3/core";_fa "github.com/unidoc/unipdf/v3/internal/cmap";_f "github.com/unidoc/unipdf/v3/internal/textencoding";
+package fonts ;import (_bd "bytes";_df "encoding/binary";_a "errors";_b "fmt";
+	_dfa "github.com/magnus195/unipdf/v3/common";
+	_bg "github.com/magnus195/unipdf/v3/core";
+	_fa "github.com/magnus195/unipdf/v3/internal/cmap";
+	_f "github.com/magnus195/unipdf/v3/internal/textencoding";
 _c "io";_de "os";_gb "regexp";_e "sort";_g "strings";_gg "sync";);func (_accg *ttfParser )ParseComponents ()error {if _gee :=_accg .ParseHead ();_gee !=nil {return _gee ;};if _acbe :=_accg .ParseHhea ();_acbe !=nil {return _acbe ;};if _cgc :=_accg .ParseMaxp ();
 _cgc !=nil {return _cgc ;};if _gdd :=_accg .ParseHmtx ();_gdd !=nil {return _gdd ;};if _ ,_daag :=_accg ._fegd ["\u006e\u0061\u006d\u0065"];_daag {if _dee :=_accg .ParseName ();_dee !=nil {return _dee ;};};if _ ,_ffae :=_accg ._fegd ["\u004f\u0053\u002f\u0032"];
 _ffae {if _gbe :=_accg .ParseOS2 ();_gbe !=nil {return _gbe ;};};if _ ,_geb :=_accg ._fegd ["\u0070\u006f\u0073\u0074"];_geb {if _fef :=_accg .ParsePost ();_fef !=nil {return _fef ;};};if _ ,_cebd :=_accg ._fegd ["\u0063\u006d\u0061\u0070"];_cebd {if _bge :=_accg .ParseCmap ();

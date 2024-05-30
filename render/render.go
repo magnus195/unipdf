@@ -9,8 +9,17 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package render ;import (_d "errors";_bb "fmt";_gda "github.com/adrg/sysfont";_gb "github.com/unidoc/unipdf/v3/annotator";_dd "github.com/unidoc/unipdf/v3/common";_gg "github.com/unidoc/unipdf/v3/contentstream";_ae "github.com/unidoc/unipdf/v3/contentstream/draw";
-_cdg "github.com/unidoc/unipdf/v3/core";_gd "github.com/unidoc/unipdf/v3/internal/license";_ff "github.com/unidoc/unipdf/v3/internal/transform";_be "github.com/unidoc/unipdf/v3/model";_ge "github.com/unidoc/unipdf/v3/render/internal/context";_aa "github.com/unidoc/unipdf/v3/render/internal/context/imagerender";
+package render ;import (_d "errors";_bb "fmt";_gda "github.com/adrg/sysfont";
+	_gb "github.com/magnus195/unipdf/v3/annotator";
+	_dd "github.com/magnus195/unipdf/v3/common";
+	_gg "github.com/magnus195/unipdf/v3/contentstream";
+	_ae "github.com/magnus195/unipdf/v3/contentstream/draw";
+	_cdg "github.com/magnus195/unipdf/v3/core";
+	_gd "github.com/magnus195/unipdf/v3/internal/license";
+	_ff "github.com/magnus195/unipdf/v3/internal/transform";
+	_be "github.com/magnus195/unipdf/v3/model";
+	_ge "github.com/magnus195/unipdf/v3/render/internal/context";
+	_aa "github.com/magnus195/unipdf/v3/render/internal/context/imagerender";
 _gf "golang.org/x/image/draw";_g "image";_cd "image/color";_af "image/draw";_f "image/jpeg";_da "image/png";_c "math";_df "os";_db "path/filepath";_b "strings";);func (_bgc renderer )renderPage (_cbf _ge .Context ,_cff *_be .PdfPage ,_ddd _ff .Matrix ,_fb bool )error {if !_fb {_fcb :=_be .FieldFlattenOpts {AnnotFilterFunc :func (_adb *_be .PdfAnnotation )bool {switch _adb .GetContext ().(type ){case *_be .PdfAnnotationLine :return true ;
 case *_be .PdfAnnotationSquare :return true ;case *_be .PdfAnnotationCircle :return true ;case *_be .PdfAnnotationPolygon :return true ;case *_be .PdfAnnotationPolyLine :return true ;};return false ;}};_cbfb :=_gb .FieldAppearance {};_eab :=_cff .FlattenFieldsWithOpts (_cbfb ,&_fcb );
 if _eab !=nil {_dd .Log .Debug ("\u0045\u0072r\u006f\u0072\u0020\u0064u\u0072\u0069n\u0067\u0020\u0061\u006e\u006e\u006f\u0074\u0061t\u0069\u006f\u006e\u0020\u0066\u006c\u0061\u0074\u0074\u0065\u006e\u0069n\u0067\u0020\u0025\u0076",_eab );};};_dc ,_dag :=_cff .GetAllContentStreams ();

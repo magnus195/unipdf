@@ -9,8 +9,12 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package unichart ;import (_d "bytes";_f "fmt";_b "github.com/unidoc/unichart/render";_ee "github.com/unidoc/unipdf/v3/common";_bg "github.com/unidoc/unipdf/v3/contentstream";_ff "github.com/unidoc/unipdf/v3/contentstream/draw";_bd "github.com/unidoc/unipdf/v3/core";
-_g "github.com/unidoc/unipdf/v3/model";_e "image/color";_dg "io";_de "math";);func (_fba *Renderer )Text (text string ,x ,y int ){_fba ._fb .Add_q ();_fba .SetFont (_fba ._dga );_gbg ,_dd ,_aa ,_ :=_dgae (_fba ._gc );_fba ._fb .Add_rg (_gbg ,_dd ,_aa );
+package unichart ;import (_d "bytes";_f "fmt";_b "github.com/unidoc/unichart/render";
+	_ee "github.com/magnus195/unipdf/v3/common";
+	_bg "github.com/magnus195/unipdf/v3/contentstream";
+	_ff "github.com/magnus195/unipdf/v3/contentstream/draw";
+	_bd "github.com/magnus195/unipdf/v3/core";
+	_g "github.com/magnus195/unipdf/v3/model";_e "image/color";_dg "io";_de "math";);func (_fba *Renderer )Text (text string ,x ,y int ){_fba ._fb .Add_q ();_fba .SetFont (_fba ._dga );_gbg ,_dd ,_aa ,_ :=_dgae (_fba ._gc );_fba ._fb .Add_rg (_gbg ,_dd ,_aa );
 _fba ._fb .Translate (float64 (x ),float64 (y )).Scale (1,-1);if _ebg :=_fba ._cg ;_ebg !=0{_fba ._fb .RotateDeg (_ebg );};_fba ._fb .Add_BT ().Add_TL (_fba ._ce );var (_db =_fba ._dga .Encoder ();_gf =_fba .wrapText (text );_bb =len (_gf ););for _fdba ,_gde :=range _gf {_fba ._fb .Add_TJ (_bd .MakeStringFromBytes (_db .Encode (_gde )));
 if _fdba !=_bb -1{_fba ._fb .Add_Tstar ();};};_fba ._fb .Add_ET ();_fba ._fb .Add_Q ();};func (_gg *Renderer )MeasureText (text string )_b .Box {_fcea :=_gg ._ce ;_bag ,_feb :=_gg ._dga .GetFontDescriptor ();if _feb !=nil {_ee .Log .Debug ("W\u0041\u0052\u004e\u003a\u0020\u0055n\u0061\u0062\u006c\u0065\u0020\u0074o\u0020\u0067\u0065\u0074\u0020\u0066\u006fn\u0074\u0020\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074o\u0072");
 }else {_dce ,_dcf :=_bag .GetCapHeight ();if _dcf !=nil {_ee .Log .Debug ("\u0057\u0041\u0052\u004e\u003a\u0020\u0055\u006e\u0061\u0062\u006c\u0065\u0020t\u006f\u0020\u0067\u0065\u0074\u0020f\u006f\u006e\u0074\u0020\u0063\u0061\u0070\u0020\u0068\u0065\u0069\u0067\u0068t\u003a\u0020\u0025\u0076",_dcf );

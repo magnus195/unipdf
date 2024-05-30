@@ -9,7 +9,11 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package classer ;import (_df "github.com/unidoc/unipdf/v3/common";_g "github.com/unidoc/unipdf/v3/internal/jbig2/basic";_b "github.com/unidoc/unipdf/v3/internal/jbig2/bitmap";_eb "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_ef "image";_d "math";
+package classer ;import (
+	_df "github.com/magnus195/unipdf/v3/common";
+	_g "github.com/magnus195/unipdf/v3/internal/jbig2/basic";
+	_b "github.com/magnus195/unipdf/v3/internal/jbig2/bitmap";
+	_eb "github.com/magnus195/unipdf/v3/internal/jbig2/errors";_ef "image";_d "math";
 );const JbAddedPixels =6;func (_bcc Settings )Validate ()error {const _gfbc ="\u0053\u0065\u0074\u0074\u0069\u006e\u0067\u0073\u002e\u0056\u0061\u006ci\u0064\u0061\u0074\u0065";if _bcc .Thresh < 0.4||_bcc .Thresh > 0.98{return _eb .Error (_gfbc ,"\u006a\u0062i\u0067\u0032\u0020\u0065\u006e\u0063\u006f\u0064\u0065\u0072\u0020\u0074\u0068\u0072\u0065\u0073\u0068\u0020\u006e\u006f\u0074\u0020\u0069\u006e\u0020\u0072\u0061\u006e\u0067\u0065\u0020\u005b\u0030\u002e\u0034\u0020\u002d\u0020\u0030\u002e\u0039\u0038\u005d");
 };if _bcc .WeightFactor < 0.0||_bcc .WeightFactor > 1.0{return _eb .Error (_gfbc ,"\u006a\u0062i\u0067\u0032\u0020\u0065\u006ec\u006f\u0064\u0065\u0072\u0020w\u0065\u0069\u0067\u0068\u0074\u0020\u0066\u0061\u0063\u0074\u006f\u0072\u0020\u006e\u006f\u0074\u0020\u0069\u006e\u0020\u0072\u0061\u006e\u0067\u0065\u0020\u005b\u0030\u002e\u0030\u0020\u002d\u0020\u0031\u002e\u0030\u005d");
 };if _bcc .RankHaus < 0.5||_bcc .RankHaus > 1.0{return _eb .Error (_gfbc ,"\u006a\u0062\u0069\u0067\u0032\u0020\u0065\u006e\u0063\u006f\u0064\u0065\u0072\u0020\u0072a\u006e\u006b\u0020\u0068\u0061\u0075\u0073\u0020\u0076\u0061\u006c\u0075\u0065 \u006e\u006f\u0074\u0020\u0069\u006e\u0020\u0072\u0061\u006e\u0067\u0065 [\u0030\u002e\u0035\u0020\u002d\u0020\u0031\u002e\u0030\u005d");

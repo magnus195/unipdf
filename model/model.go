@@ -38,9 +38,22 @@
 //
 // For more examples, see the unidoc-examples repository on GitHub: https://github.com/unidoc/unidoc-examples
 package model ;import (_cg "bufio";_aac "bytes";_bf "crypto/md5";_da "crypto/rand";_de "crypto/sha1";_ffd "crypto/x509";_g "encoding/binary";_db "encoding/hex";_ede "errors";_c "fmt";_fgb "github.com/gabriel-vasile/mimetype";_bb "github.com/unidoc/pkcs7";
-_df "github.com/unidoc/unipdf/v3/common";_cc "github.com/unidoc/unipdf/v3/core";_bd "github.com/unidoc/unipdf/v3/core/security";_ba "github.com/unidoc/unipdf/v3/core/security/crypt";_fac "github.com/unidoc/unipdf/v3/internal/cmap";_ec "github.com/unidoc/unipdf/v3/internal/imageutil";
-_abc "github.com/unidoc/unipdf/v3/internal/license";_dac "github.com/unidoc/unipdf/v3/internal/sampling";_cbf "github.com/unidoc/unipdf/v3/internal/textencoding";_cde "github.com/unidoc/unipdf/v3/internal/timeutils";_ga "github.com/unidoc/unipdf/v3/internal/transform";
-_dc "github.com/unidoc/unipdf/v3/model/internal/docutil";_edg "github.com/unidoc/unipdf/v3/model/internal/fonts";_fd "github.com/unidoc/unipdf/v3/model/mdp";_dcf "github.com/unidoc/unipdf/v3/model/sigutil";_bbd "github.com/unidoc/unipdf/v3/ps";_bdc "github.com/unidoc/unitype";
+	_df "github.com/magnus195/unipdf/v3/common";
+	_cc "github.com/magnus195/unipdf/v3/core";
+	_bd "github.com/magnus195/unipdf/v3/core/security";
+	_ba "github.com/magnus195/unipdf/v3/core/security/crypt";
+	_fac "github.com/magnus195/unipdf/v3/internal/cmap";
+	_ec "github.com/magnus195/unipdf/v3/internal/imageutil";
+	_abc "github.com/magnus195/unipdf/v3/internal/license";
+	_dac "github.com/magnus195/unipdf/v3/internal/sampling";
+	_cbf "github.com/magnus195/unipdf/v3/internal/textencoding";
+	_cde "github.com/magnus195/unipdf/v3/internal/timeutils";
+	_ga "github.com/magnus195/unipdf/v3/internal/transform";
+	_dc "github.com/magnus195/unipdf/v3/model/internal/docutil";
+	_edg "github.com/magnus195/unipdf/v3/model/internal/fonts";
+	_fd "github.com/magnus195/unipdf/v3/model/mdp";
+	_dcf "github.com/magnus195/unipdf/v3/model/sigutil";
+	_bbd "github.com/magnus195/unipdf/v3/ps";_bdc "github.com/unidoc/unitype";
 _gc "golang.org/x/xerrors";_a "hash";_ee "image";_d "image/color";_ "image/gif";_ "image/png";_cd "io";_ea "io/ioutil";_ed "math";_ab "math/rand";_aa "os";_eg "path/filepath";_cb "regexp";_eac "sort";_gf "strconv";_fa "strings";_f "sync";_b "time";_ca "unicode";
 _eaf "unicode/utf8";);
 

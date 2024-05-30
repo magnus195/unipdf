@@ -9,7 +9,10 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package mmr ;import (_ab "errors";_f "fmt";_ca "github.com/unidoc/unipdf/v3/common";_ff "github.com/unidoc/unipdf/v3/internal/bitwise";_e "github.com/unidoc/unipdf/v3/internal/jbig2/bitmap";_c "io";);func (_bf *code )String ()string {return _f .Sprintf ("\u0025\u0064\u002f\u0025\u0064\u002f\u0025\u0064",_bf ._g ,_bf ._b ,_bf ._ce );
+package mmr ;import (_ab "errors";_f "fmt";
+	_ca "github.com/magnus195/unipdf/v3/common";
+	_ff "github.com/magnus195/unipdf/v3/internal/bitwise";
+	_e "github.com/magnus195/unipdf/v3/internal/jbig2/bitmap";_c "io";);func (_bf *code )String ()string {return _f .Sprintf ("\u0025\u0064\u002f\u0025\u0064\u002f\u0025\u0064",_bf ._g ,_bf ._b ,_bf ._ce );
 };func (_ad *Decoder )fillBitmap (_fgb *_e .Bitmap ,_bba int ,_eeg []int ,_ef int )error {var _gdc byte ;_dc :=0;_ea :=_fgb .GetByteIndex (_dc ,_bba );for _fb :=0;_fb < _ef ;_fb ++{_af :=byte (1);_acg :=_eeg [_fb ];if (_fb &1)==0{_af =0;};for _dc < _acg {_gdc =(_gdc <<1)|_af ;
 _dc ++;if (_dc &7)==0{if _add :=_fgb .SetByte (_ea ,_gdc );_add !=nil {return _add ;};_ea ++;_gdc =0;};};};if (_dc &7)!=0{_gdc <<=uint (8-(_dc &7));if _ceac :=_fgb .SetByte (_ea ,_gdc );_ceac !=nil {return _ceac ;};};return nil ;};func (_bbb *Decoder )UncompressMMR ()(_ec *_e .Bitmap ,_dad error ){_ec =_e .New (_bbb ._dda ,_bbb ._gda );
 _ccf :=make ([]int ,_ec .Width +5);_geb :=make ([]int ,_ec .Width +5);_geb [0]=_ec .Width ;_daa :=1;var _ecf int ;for _fg :=0;_fg < _ec .Height ;_fg ++{_ecf ,_dad =_bbb .uncompress2d (_bbb ._bda ,_geb ,_daa ,_ccf ,_ec .Width );if _dad !=nil {return nil ,_dad ;

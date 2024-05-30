@@ -9,7 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package security ;import (_eb "bytes";_fe "crypto/aes";_f "crypto/cipher";_ba "crypto/md5";_e "crypto/rand";_ce "crypto/rc4";_dc "crypto/sha256";_b "crypto/sha512";_ac "encoding/binary";_a "errors";_bd "fmt";_ed "github.com/unidoc/unipdf/v3/common";_d "hash";
+package security ;import (_eb "bytes";_fe "crypto/aes";_f "crypto/cipher";_ba "crypto/md5";_e "crypto/rand";_ce "crypto/rc4";_dc "crypto/sha256";_b "crypto/sha512";_ac "encoding/binary";_a "errors";_bd "fmt";
+	_ed "github.com/magnus195/unipdf/v3/common";_d "hash";
 _cb "io";_eg "math";);func _aeg (_bgg []byte ,_geg int ){_gegc :=_geg ;for _gegc < len (_bgg ){copy (_bgg [_gegc :],_bgg [:_gegc ]);_gegc *=2;};};
 
 // NewHandlerR6 creates a new standard security handler for R=5 and R=6.

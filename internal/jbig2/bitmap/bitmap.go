@@ -9,8 +9,12 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package bitmap ;import (_fge "encoding/binary";_f "github.com/stretchr/testify/require";_b "github.com/unidoc/unipdf/v3/common";_g "github.com/unidoc/unipdf/v3/internal/bitwise";_ffa "github.com/unidoc/unipdf/v3/internal/imageutil";_de "github.com/unidoc/unipdf/v3/internal/jbig2/basic";
-_c "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_cb "image";_fb "math";_ff "sort";_cc "strings";_fg "testing";);func _gdbg (_ecfc ,_gcef *Bitmap ,_ddded ,_acgd int )(_bddgg error ){const _bccde ="\u0073e\u0065d\u0066\u0069\u006c\u006c\u0042i\u006e\u0061r\u0079\u004c\u006f\u0077\u0034";
+package bitmap ;import (_fge "encoding/binary";_f "github.com/stretchr/testify/require";
+	_b "github.com/magnus195/unipdf/v3/common";
+	_g "github.com/magnus195/unipdf/v3/internal/bitwise";
+	_ffa "github.com/magnus195/unipdf/v3/internal/imageutil";
+	_de "github.com/magnus195/unipdf/v3/internal/jbig2/basic";
+	_c "github.com/magnus195/unipdf/v3/internal/jbig2/errors";_cb "image";_fb "math";_ff "sort";_cc "strings";_fg "testing";);func _gdbg (_ecfc ,_gcef *Bitmap ,_ddded ,_acgd int )(_bddgg error ){const _bccde ="\u0073e\u0065d\u0066\u0069\u006c\u006c\u0042i\u006e\u0061r\u0079\u004c\u006f\u0077\u0034";
 var (_bcde ,_ecd ,_bfac ,_bcgg int ;_bafe ,_fage ,_cfdcg ,_ddeb ,_fgbfbd ,_gaag ,_agdc byte ;);for _bcde =0;_bcde < _ddded ;_bcde ++{_bfac =_bcde *_ecfc .RowStride ;_bcgg =_bcde *_gcef .RowStride ;for _ecd =0;_ecd < _acgd ;_ecd ++{_bafe ,_bddgg =_ecfc .GetByte (_bfac +_ecd );
 if _bddgg !=nil {return _c .Wrap (_bddgg ,_bccde ,"\u0066i\u0072\u0073\u0074\u0020\u0067\u0065t");};_fage ,_bddgg =_gcef .GetByte (_bcgg +_ecd );if _bddgg !=nil {return _c .Wrap (_bddgg ,_bccde ,"\u0073\u0065\u0063\u006f\u006e\u0064\u0020\u0067\u0065\u0074");
 };if _bcde > 0{_cfdcg ,_bddgg =_ecfc .GetByte (_bfac -_ecfc .RowStride +_ecd );if _bddgg !=nil {return _c .Wrap (_bddgg ,_bccde ,"\u0069\u0020\u003e \u0030");};_bafe |=_cfdcg ;};if _ecd > 0{_ddeb ,_bddgg =_ecfc .GetByte (_bfac +_ecd -1);if _bddgg !=nil {return _c .Wrap (_bddgg ,_bccde ,"\u006a\u0020\u003e \u0030");

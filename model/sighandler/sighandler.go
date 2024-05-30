@@ -11,7 +11,11 @@
 
 // Package sighandler implements digital signature handlers for PDF signature validation and signing.
 package sighandler ;import (_ge "bytes";_gb "crypto";_fg "crypto/rand";_de "crypto/rsa";_fe "crypto/x509";_e "crypto/x509/pkix";_cd "encoding/asn1";_fc "encoding/hex";_b "errors";_bb "fmt";_gdf "github.com/unidoc/pkcs7";_fcc "github.com/unidoc/timestamp";
-_gd "github.com/unidoc/unipdf/v3/common";_dg "github.com/unidoc/unipdf/v3/core";_dgd "github.com/unidoc/unipdf/v3/model";_fa "github.com/unidoc/unipdf/v3/model/mdp";_fag "github.com/unidoc/unipdf/v3/model/sigutil";_a "hash";_f "math/big";_g "strings";_c "time";
+	_gd "github.com/magnus195/unipdf/v3/common";
+	_dg "github.com/magnus195/unipdf/v3/core";
+	_dgd "github.com/magnus195/unipdf/v3/model";
+	_fa "github.com/magnus195/unipdf/v3/model/mdp";
+	_fag "github.com/magnus195/unipdf/v3/model/sigutil";_a "hash";_f "math/big";_g "strings";_c "time";
 );func _eabg (_gga []byte ,_deb int )(_baa []byte ){_ffg :=len (_gga );if _ffg > _deb {_ffg =_deb ;};_baa =make ([]byte ,_deb );copy (_baa [len (_baa )-_ffg :],_gga );return ;};func _daed (_gda *_de .PublicKey ,_bga []byte )_gb .Hash {_ecf :=_gda .Size ();
 if _ecf !=len (_bga ){return 0;};_beg :=func (_db *_f .Int ,_gecb *_de .PublicKey ,_bag *_f .Int )*_f .Int {_agfb :=_f .NewInt (int64 (_gecb .E ));_db .Exp (_bag ,_agfb ,_gecb .N );return _db ;};_gaec :=new (_f .Int ).SetBytes (_bga );_gcf :=_beg (new (_f .Int ),_gda ,_gaec );
 _geff :=_eabg (_gcf .Bytes (),_ecf );if _geff [0]!=0||_geff [1]!=1{return 0;};_bge :=[]struct{Hash _gb .Hash ;Prefix []byte ;}{{Hash :_gb .SHA1 ,Prefix :[]byte {0x30,0x21,0x30,0x09,0x06,0x05,0x2b,0x0e,0x03,0x02,0x1a,0x05,0x00,0x04,0x14}},{Hash :_gb .SHA256 ,Prefix :[]byte {0x30,0x31,0x30,0x0d,0x06,0x09,0x60,0x86,0x48,0x01,0x65,0x03,0x04,0x02,0x01,0x05,0x00,0x04,0x20}},{Hash :_gb .SHA384 ,Prefix :[]byte {0x30,0x41,0x30,0x0d,0x06,0x09,0x60,0x86,0x48,0x01,0x65,0x03,0x04,0x02,0x02,0x05,0x00,0x04,0x30}},{Hash :_gb .SHA512 ,Prefix :[]byte {0x30,0x51,0x30,0x0d,0x06,0x09,0x60,0x86,0x48,0x01,0x65,0x03,0x04,0x02,0x03,0x05,0x00,0x04,0x40}},{Hash :_gb .RIPEMD160 ,Prefix :[]byte {0x30,0x20,0x30,0x08,0x06,0x06,0x28,0xcf,0x06,0x03,0x00,0x31,0x04,0x14}}};

@@ -9,7 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package sigutil ;import (_eg "bytes";_c "crypto";_ae "crypto/x509";_f "encoding/asn1";_gc "encoding/pem";_cd "errors";_ga "fmt";_eb "github.com/unidoc/timestamp";_bg "github.com/unidoc/unipdf/v3/common";_cg "golang.org/x/crypto/ocsp";_g "io";_b "io/ioutil";
+package sigutil ;import (_eg "bytes";_c "crypto";_ae "crypto/x509";_f "encoding/asn1";_gc "encoding/pem";_cd "errors";_ga "fmt";_eb "github.com/unidoc/timestamp";
+	_bg "github.com/magnus195/unipdf/v3/common";_cg "golang.org/x/crypto/ocsp";_g "io";_b "io/ioutil";
 _a "net/http";_d "time";);
 
 // IsCA returns true if the provided certificate appears to be a CA certificate.

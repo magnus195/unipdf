@@ -12,9 +12,16 @@
 // Package creator is used for quickly generating pages and content with a simple interface.
 // It is built on top of the model package to provide access to the most common
 // operations such as creating text and image reports and manipulating existing pages.
-package creator ;import (_f "bytes";_a "encoding/xml";_d "errors";_e "fmt";_ge "github.com/gorilla/i18n/linebreak";_de "github.com/unidoc/unichart/render";_bd "github.com/unidoc/unipdf/v3/common";_bee "github.com/unidoc/unipdf/v3/contentstream";_gg "github.com/unidoc/unipdf/v3/contentstream/draw";
-_dc "github.com/unidoc/unipdf/v3/core";_bfg "github.com/unidoc/unipdf/v3/internal/graphic2d/svg";_ccg "github.com/unidoc/unipdf/v3/internal/integrations/unichart";_ggb "github.com/unidoc/unipdf/v3/internal/license";_ea "github.com/unidoc/unipdf/v3/internal/transform";
-_gec "github.com/unidoc/unipdf/v3/model";_da "golang.org/x/text/unicode/bidi";_cc "image";_ef "io";_be "log";_ag "math";_cg "os";_bf "regexp";_c "sort";_fa "strconv";_bea "strings";_b "text/template";_ee "unicode";);
+package creator ;import (_f "bytes";_a "encoding/xml";_d "errors";_e "fmt";_ge "github.com/gorilla/i18n/linebreak";_de "github.com/unidoc/unichart/render";
+	_bd "github.com/magnus195/unipdf/v3/common";
+	_bee "github.com/magnus195/unipdf/v3/contentstream";
+	_gg "github.com/magnus195/unipdf/v3/contentstream/draw";
+	_dc "github.com/magnus195/unipdf/v3/core";
+	_bfg "github.com/magnus195/unipdf/v3/internal/graphic2d/svg";
+	_ccg "github.com/magnus195/unipdf/v3/internal/integrations/unichart";
+	_ggb "github.com/magnus195/unipdf/v3/internal/license";
+	_ea "github.com/magnus195/unipdf/v3/internal/transform";
+	_gec "github.com/magnus195/unipdf/v3/model";_da "golang.org/x/text/unicode/bidi";_cc "image";_ef "io";_be "log";_ag "math";_cg "os";_bf "regexp";_c "sort";_fa "strconv";_bea "strings";_b "text/template";_ee "unicode";);
 
 // SetLineSeparator sets the separator for all new lines of the table of contents.
 func (_gcec *TOC )SetLineSeparator (separator string ){_gcec ._cadb =separator };

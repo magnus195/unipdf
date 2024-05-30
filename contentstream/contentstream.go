@@ -20,8 +20,12 @@
 // be converted to a string for embedding in a PDF file.
 //
 // The contentstream package uses the core and model packages.
-package contentstream ;import (_c "bufio";_fb "bytes";_da "encoding/hex";_d "errors";_fc "fmt";_fe "github.com/unidoc/unipdf/v3/common";_aa "github.com/unidoc/unipdf/v3/core";_fd "github.com/unidoc/unipdf/v3/internal/imageutil";_b "github.com/unidoc/unipdf/v3/internal/transform";
-_bd "github.com/unidoc/unipdf/v3/model";_ab "image/color";_g "image/jpeg";_e "io";_f "math";_ae "regexp";_dg "strconv";);
+package contentstream ;import (_c "bufio";_fb "bytes";_da "encoding/hex";_d "errors";_fc "fmt";
+	_fe "github.com/magnus195/unipdf/v3/common";
+	_aa "github.com/magnus195/unipdf/v3/core";
+	_fd "github.com/magnus195/unipdf/v3/internal/imageutil";
+	_b "github.com/magnus195/unipdf/v3/internal/transform";
+	_bd "github.com/magnus195/unipdf/v3/model";_ab "image/color";_g "image/jpeg";_e "io";_f "math";_ae "regexp";_dg "strconv";);
 
 // NewContentStreamProcessor returns a new ContentStreamProcessor for operations `ops`.
 func NewContentStreamProcessor (ops []*ContentStreamOperation )*ContentStreamProcessor {_bee :=ContentStreamProcessor {};_bee ._gaac =GraphicStateStack {};_cfefc :=GraphicsState {};_bee ._aae =_cfefc ;_bee ._gddb =[]handlerEntry {};_bee ._gfda =0;_bee ._gcdc =ops ;

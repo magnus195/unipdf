@@ -9,7 +9,9 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package sanitize ;import (_ce "github.com/unidoc/unipdf/v3/common";_e "github.com/unidoc/unipdf/v3/core";);
+package sanitize ;import (
+	_ce "github.com/magnus195/unipdf/v3/common";
+	_e "github.com/magnus195/unipdf/v3/core";);
 
 // GetSuspiciousObjects returns a count of each detected suspicious object.
 func (_gb *Sanitizer )GetSuspiciousObjects ()map[string ]int {return _gb ._ced };

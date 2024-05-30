@@ -9,7 +9,9 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package bitwise ;import (_ce "encoding/binary";_ac "errors";_e "fmt";_f "github.com/unidoc/unipdf/v3/common";_ef "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_a "io";);func (_de *BufferedWriter )Write (d []byte )(int ,error ){_de .expandIfNeeded (len (d ));
+package bitwise ;import (_ce "encoding/binary";_ac "errors";_e "fmt";
+	_f "github.com/magnus195/unipdf/v3/common";
+	_ef "github.com/magnus195/unipdf/v3/internal/jbig2/errors";_a "io";);func (_de *BufferedWriter )Write (d []byte )(int ,error ){_de .expandIfNeeded (len (d ));
 if _de ._ffg ==0{return _de .writeFullBytes (d ),nil ;};return _de .writeShiftedBytes (d ),nil ;};func (_gbd *Reader )Length ()uint64 {return uint64 (_gbd ._af ._deg )};var _ _a .ByteWriter =&BufferedWriter {};func (_fde *Writer )FinishByte (){if _fde ._egb ==0{return ;
 };_fde ._egb =0;_fde ._cdb ++;};func (_bgb *Reader )ReadBits (n byte )(_ccc uint64 ,_afa error ){if n < _bgb ._ade {_gde :=_bgb ._ade -n ;_ccc =uint64 (_bgb ._dge >>_gde );_bgb ._dge &=1<<_gde -1;_bgb ._ade =_gde ;return _ccc ,nil ;};if n > _bgb ._ade {if _bgb ._ade > 0{_ccc =uint64 (_bgb ._dge );
 n -=_bgb ._ade ;};for n >=8{_cgd ,_aef :=_bgb .readBufferByte ();if _aef !=nil {return 0,_aef ;};_ccc =_ccc <<8+uint64 (_cgd );n -=8;};if n > 0{if _bgb ._dge ,_afa =_bgb .readBufferByte ();_afa !=nil {return 0,_afa ;};_cbc :=8-n ;_ccc =_ccc <<n +uint64 (_bgb ._dge >>_cbc );

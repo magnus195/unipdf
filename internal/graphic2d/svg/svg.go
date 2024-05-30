@@ -9,7 +9,11 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package svg ;import (_cg "encoding/xml";_dc "fmt";_da "github.com/unidoc/unipdf/v3/common";_ee "github.com/unidoc/unipdf/v3/contentstream";_cb "github.com/unidoc/unipdf/v3/contentstream/draw";_ac "github.com/unidoc/unipdf/v3/internal/graphic2d";_e "golang.org/x/net/html/charset";
+package svg ;import (_cg "encoding/xml";_dc "fmt";
+	_da "github.com/magnus195/unipdf/v3/common";
+	_ee "github.com/magnus195/unipdf/v3/contentstream";
+	_cb "github.com/magnus195/unipdf/v3/contentstream/draw";
+	_ac "github.com/magnus195/unipdf/v3/internal/graphic2d";_e "golang.org/x/net/html/charset";
 _a "io";_gg "math";_ca "os";_gc "strconv";_d "strings";_c "unicode";);func _cf (_dd *GraphicSVG ,_ag *_ee .ContentCreator ){_ag .Add_q ();_dd .Style .toContentStream (_ag );_dad ,_b :=_daaa (_dd .Attributes ["\u0064"]);if _b !=nil {_da .Log .Error ("\u0045R\u0052\u004f\u0052\u003a\u0020\u0025s",_b .Error ());
 };var (_cab ,_ga =0.0,0.0;_df ,_cfe =0.0,0.0;_ge *Command ;);for _ ,_gd :=range _dad .Subpaths {for _ ,_gca :=range _gd .Commands {switch _d .ToLower (_gca .Symbol ){case "\u006d":_df ,_cfe =_gca .Params [0]*_dd ._bgd ,_gca .Params [1]*_dd ._bgd ;if !_gca .isAbsolute (){_df ,_cfe =_cab +_df -_dd .ViewBox .X ,_ga +_cfe -_dd .ViewBox .Y ;
 };_ag .Add_m (_abce (_df ,3),_abce (_cfe ,3));_cab ,_ga =_df ,_cfe ;case "\u0063":_ec ,_fg ,_bg ,_eb ,_cfc ,_gb :=_gca .Params [0]*_dd ._bgd ,_gca .Params [1]*_dd ._bgd ,_gca .Params [2]*_dd ._bgd ,_gca .Params [3]*_dd ._bgd ,_gca .Params [4]*_dd ._bgd ,_gca .Params [5]*_dd ._bgd ;

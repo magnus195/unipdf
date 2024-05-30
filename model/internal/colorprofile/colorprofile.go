@@ -9,7 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package colorprofile ;import (_f "bytes";_fe "compress/gzip";_ff "encoding/hex";_g "errors";_e "fmt";_gf "github.com/unidoc/unipdf/v3/model";_c "io";_d "io/ioutil";_gd "os";_fc "path/filepath";_bb "strconv";_fd "strings";_be "time";);func _ca ()(*asset ,error ){_ead ,_ge :=_bbba ();
+package colorprofile ;import (_f "bytes";_fe "compress/gzip";_ff "encoding/hex";_g "errors";_e "fmt";
+	_gf "github.com/magnus195/unipdf/v3/model";_c "io";_d "io/ioutil";_gd "os";_fc "path/filepath";_bb "strconv";_fd "strings";_be "time";);func _ca ()(*asset ,error ){_ead ,_ge :=_bbba ();
 if _ge !=nil {return nil ,_ge ;};_fff :=bindataFileInfo {_fdd :"\u0049S\u004f\u0063\u006f\u0061\u0074\u0065\u0064\u005f\u0076\u0032\u005f3\u0030\u0030\u005f\u0062\u0061\u0073\u002e\u0049\u0043\u0043",_db :1052612,_gff :_gd .FileMode (420),_bc :_be .Unix (1171030956,0)};
 _bgb :=&asset {_bbb :_ead ,_cf :_fff };return _bgb ,nil ;};func _eddd (_ece ,_aaf string )string {_dca :=_fd .Replace (_aaf ,"\u005c","\u002f",-1);return _fc .Join (append ([]string {_ece },_fd .Split (_dca ,"\u002f")...)...);};func _ (){var _afb [1]struct{};
 _ =_afb [ColorSpaceUndefined -0];_ =_afb [ColorSpaceXYZ -1];_ =_afb [ColorSpaceLAB -2];_ =_afb [ColorSpaceLUV -3];_ =_afb [ColorSpaceYCBR -4];_ =_afb [ColorSpaceYXY -5];_ =_afb [ColorSpaceRGB -6];_ =_afb [ColorSpaceGRAY -7];_ =_afb [ColorSpaceHSV -8];_ =_afb [ColorSpaceHLS -9];

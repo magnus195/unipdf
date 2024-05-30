@@ -9,7 +9,9 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package docutil ;import (_g "errors";_d "fmt";_ad "github.com/unidoc/unipdf/v3/common";_gc "github.com/unidoc/unipdf/v3/core";);type Catalog struct{Object *_gc .PdfObjectDictionary ;_f *Document ;};func (_dg *Catalog )GetMarkInfo ()(*_gc .PdfObjectDictionary ,bool ){_ab ,_fbf :=_gc .GetDict (_dg .Object .Get ("\u004d\u0061\u0072\u006b\u0049\u006e\u0066\u006f"));
+package docutil ;import (_g "errors";_d "fmt";
+	_ad "github.com/magnus195/unipdf/v3/common";
+	_gc "github.com/magnus195/unipdf/v3/core";);type Catalog struct{Object *_gc .PdfObjectDictionary ;_f *Document ;};func (_dg *Catalog )GetMarkInfo ()(*_gc .PdfObjectDictionary ,bool ){_ab ,_fbf :=_gc .GetDict (_dg .Object .Get ("\u004d\u0061\u0072\u006b\u0049\u006e\u0066\u006f"));
 return _ab ,_fbf ;};func (_dag *Document )AddStream (stream *_gc .PdfObjectStream ){for _ ,_fcd :=range _dag .Objects {if _fcd ==stream {return ;};};_dag .Objects =append (_dag .Objects ,stream );};type Image struct{Name string ;Width int ;Height int ;
 Colorspace _gc .PdfObjectName ;ColorComponents int ;BitsPerComponent int ;SMask *ImageSMask ;Stream *_gc .PdfObjectStream ;};type OutputIntents struct{_deg *_gc .PdfObjectArray ;_fe *Document ;_ba *_gc .PdfIndirectObject ;};func _gee (_aec _gc .PdfObject )(_gc .PdfObjectName ,error ){var _fcc *_gc .PdfObjectName ;
 var _cfag *_gc .PdfObjectArray ;if _df ,_gf :=_aec .(*_gc .PdfIndirectObject );_gf {if _bd ,_dad :=_df .PdfObject .(*_gc .PdfObjectArray );_dad {_cfag =_bd ;}else if _cd ,_aee :=_df .PdfObject .(*_gc .PdfObjectName );_aee {_fcc =_cd ;};}else if _gb ,_gcd :=_aec .(*_gc .PdfObjectArray );

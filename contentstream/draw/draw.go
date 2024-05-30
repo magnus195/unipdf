@@ -14,7 +14,11 @@
 // page content streams and XObject forms and thus also in annotation appearance streams.
 //
 // Also defines utility functions for drawing common shapes such as rectangles, lines and circles (ovals).
-package draw ;import (_f "fmt";_ba "github.com/unidoc/unipdf/v3/contentstream";_fa "github.com/unidoc/unipdf/v3/core";_cf "github.com/unidoc/unipdf/v3/internal/transform";_a "github.com/unidoc/unipdf/v3/model";_b "math";);
+package draw ;import (_f "fmt";
+	_ba "github.com/magnus195/unipdf/v3/contentstream";
+	_fa "github.com/magnus195/unipdf/v3/core";
+	_cf "github.com/magnus195/unipdf/v3/internal/transform";
+	_a "github.com/magnus195/unipdf/v3/model";_b "math";);
 
 // Magnitude returns the magnitude of the vector.
 func (_ddf Vector )Magnitude ()float64 {return _b .Sqrt (_b .Pow (_ddf .Dx ,2.0)+_b .Pow (_ddf .Dy ,2.0))};

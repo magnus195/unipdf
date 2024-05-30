@@ -9,7 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package ccittfax ;import (_f "errors";_e "github.com/unidoc/unipdf/v3/internal/bitwise";_fa "io";_c "math";);func (_cc tiffType )String ()string {switch _cc {case _dee :return "\u0074\u0069\u0066\u0066\u0054\u0079\u0070\u0065\u004d\u006f\u0064i\u0066\u0069\u0065\u0064\u0048\u0075\u0066\u0066\u006d\u0061n\u0052\u006c\u0065";
+package ccittfax ;import (_f "errors";
+	_e "github.com/magnus195/unipdf/v3/internal/bitwise";_fa "io";_c "math";);func (_cc tiffType )String ()string {switch _cc {case _dee :return "\u0074\u0069\u0066\u0066\u0054\u0079\u0070\u0065\u004d\u006f\u0064i\u0066\u0069\u0065\u0064\u0048\u0075\u0066\u0066\u006d\u0061n\u0052\u006c\u0065";
 case _ffd :return "\u0074\u0069\u0066\u0066\u0054\u0079\u0070\u0065\u0054\u0034";case _fab :return "\u0074\u0069\u0066\u0066\u0054\u0079\u0070\u0065\u0054\u0036";default:return "\u0075n\u0064\u0065\u0066\u0069\u006e\u0065d";};};func init (){_g =&treeNode {_fded :true ,_fcgb :_fe };
 _a =&treeNode {_fcgb :_fee ,_ccg :_g };_a ._dec =_a ;_df =&tree {_bfc :&treeNode {}};if _dg :=_df .fillWithNode (12,0,_a );_dg !=nil {panic (_dg .Error ());};if _gf :=_df .fillWithNode (12,1,_g );_gf !=nil {panic (_gf .Error ());};_fb =&tree {_bfc :&treeNode {}};
 for _gb :=0;_gb < len (_fg );_gb ++{for _ae :=0;_ae < len (_fg [_gb ]);_ae ++{if _de :=_fb .fill (_gb +2,int (_fg [_gb ][_ae ]),int (_ff [_gb ][_ae ]));_de !=nil {panic (_de .Error ());};};};if _gc :=_fb .fillWithNode (12,0,_a );_gc !=nil {panic (_gc .Error ());

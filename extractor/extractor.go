@@ -11,8 +11,14 @@
 
 // Package extractor is used for quickly extracting PDF content through a simple interface.
 // Currently offers functionality for extracting textual content.
-package extractor ;import (_ba "bytes";_e "errors";_eb "fmt";_bbc "github.com/unidoc/unipdf/v3/common";_eae "github.com/unidoc/unipdf/v3/contentstream";_ga "github.com/unidoc/unipdf/v3/core";_ag "github.com/unidoc/unipdf/v3/internal/license";_dae "github.com/unidoc/unipdf/v3/internal/textencoding";
-_ge "github.com/unidoc/unipdf/v3/internal/transform";_da "github.com/unidoc/unipdf/v3/model";_ce "golang.org/x/image/draw";_ac "golang.org/x/text/unicode/norm";_ab "image";_a "image/color";_f "io";_bb "math";_df "reflect";_ea "regexp";_c "sort";_fg "strings";
+package extractor ;import (_ba "bytes";_e "errors";_eb "fmt";
+	_bbc "github.com/magnus195/unipdf/v3/common";
+	_eae "github.com/magnus195/unipdf/v3/contentstream";
+	_ga "github.com/magnus195/unipdf/v3/core";
+	_ag "github.com/magnus195/unipdf/v3/internal/license";
+	_dae "github.com/magnus195/unipdf/v3/internal/textencoding";
+	_ge "github.com/magnus195/unipdf/v3/internal/transform";
+	_da "github.com/magnus195/unipdf/v3/model";_ce "golang.org/x/image/draw";_ac "golang.org/x/text/unicode/norm";_ab "image";_a "image/color";_f "io";_bb "math";_df "reflect";_ea "regexp";_c "sort";_fg "strings";
 _d "unicode";_b "unicode/utf8";);func (_ebcf paraList )topoOrder ()[]int {if _fbag {_bbc .Log .Info ("\u0074\u006f\u0070\u006f\u004f\u0072\u0064\u0065\u0072\u003a");};_dedcc :=len (_ebcf );_deced :=make ([]bool ,_dedcc );_egbb :=make ([]int ,0,_dedcc );
 _eebdd :=_ebcf .llyOrdering ();var _dfabb func (_cfdg int );_dfabb =func (_fdda int ){_deced [_fdda ]=true ;for _bcef :=0;_bcef < _dedcc ;_bcef ++{if !_deced [_bcef ]{if _ebcf .readBefore (_eebdd ,_fdda ,_bcef ){_dfabb (_bcef );};};};_egbb =append (_egbb ,_fdda );
 };for _defcg :=0;_defcg < _dedcc ;_defcg ++{if !_deced [_defcg ]{_dfabb (_defcg );};};return _fgdcf (_egbb );};func (_fdaa *shapesState )moveTo (_ebffa ,_eab float64 ){_fdaa ._afe =true ;_fdaa ._bcec =_fdaa .devicePoint (_ebffa ,_eab );if _bfaf {_bbc .Log .Info ("\u006d\u006fv\u0065\u0054\u006f\u003a\u0020\u0025\u002e\u0032\u0066\u002c\u0025\u002e\u0032\u0066\u0020\u0064\u0065\u0076\u0069\u0063\u0065\u003d%.\u0032\u0066",_ebffa ,_eab ,_fdaa ._bcec );

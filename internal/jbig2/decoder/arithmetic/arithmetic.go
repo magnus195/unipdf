@@ -9,8 +9,11 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package arithmetic ;import (_ad "fmt";_e "github.com/unidoc/unipdf/v3/common";_ed "github.com/unidoc/unipdf/v3/internal/bitwise";_edf "github.com/unidoc/unipdf/v3/internal/jbig2/internal";_g "io";_a "strings";);type Decoder struct{ContextSize []uint32 ;
-ReferedToContextSize []uint32 ;_eb *_ed .Reader ;_dc uint8 ;_gg uint64 ;_b uint32 ;_c int64 ;_gf int32 ;_dcf int32 ;_be int64 ;};func (_abb *DecoderStats )toggleMps (){_abb ._bc [_abb ._gade ]^=1};func (_bdb *DecoderStats )SetIndex (index int32 ){_bdb ._gade =index };
+package arithmetic ;import (_ad "fmt";
+	_e "github.com/magnus195/unipdf/v3/common";
+	_ed "github.com/magnus195/unipdf/v3/internal/bitwise";
+	_edf "github.com/magnus195/unipdf/v3/internal/jbig2/internal";_g "io";_a "strings";);type Decoder struct{ContextSize []uint32 ;
+ReferedToContextSize                                                                                                     []uint32 ;_eb *_ed .Reader ;_dc uint8 ;_gg uint64 ;_b uint32 ;_c int64 ;_gf int32 ;_dcf int32 ;_be int64 ;};func (_abb *DecoderStats )toggleMps (){_abb ._bc [_abb ._gade ]^=1};func (_bdb *DecoderStats )SetIndex (index int32 ){_bdb ._gade =index };
 func (_ffd *Decoder )mpsExchange (_bec *DecoderStats ,_cag int32 )int {_gdg :=_bec ._bc [_bec ._gade ];if _ffd ._b < _f [_cag ][0]{if _f [_cag ][3]==1{_bec .toggleMps ();};_bec .setEntry (int (_f [_cag ][2]));return int (1-_gdg );};_bec .setEntry (int (_f [_cag ][1]));
 return int (_gdg );};func (_gae *DecoderStats )String ()string {_aac :=&_a .Builder {};_aac .WriteString (_ad .Sprintf ("S\u0074\u0061\u0074\u0073\u003a\u0020\u0020\u0025\u0064\u000a",len (_gae ._fg )));for _dcc ,_dfa :=range _gae ._fg {if _dfa !=0{_aac .WriteString (_ad .Sprintf ("N\u006f\u0074\u0020\u007aer\u006f \u0061\u0074\u003a\u0020\u0025d\u0020\u002d\u0020\u0025\u0064\u000a",_dcc ,_dfa ));
 };};return _aac .String ();};func (_fgd *DecoderStats )Reset (){for _ab :=0;_ab < len (_fgd ._fg );_ab ++{_fgd ._fg [_ab ]=0;_fgd ._bc [_ab ]=0;};};func (_gge *Decoder )init ()error {_gge ._be =_gge ._eb .AbsolutePosition ();_bd ,_edff :=_gge ._eb .ReadByte ();

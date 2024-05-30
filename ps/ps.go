@@ -14,7 +14,9 @@
 //
 // Package ps implements various functionalities needed for handling Postscript for PDF uses, in particular
 // for PDF function type 4.
-package ps ;import (_fb "bufio";_d "bytes";_a "errors";_ce "fmt";_e "github.com/unidoc/unipdf/v3/common";_g "github.com/unidoc/unipdf/v3/core";_f "io";_c "math";);func (_bdb *PSParser )parseFunction ()(*PSProgram ,error ){_fab ,_ :=_bdb ._gce .ReadByte ();
+package ps ;import (_fb "bufio";_d "bytes";_a "errors";_ce "fmt";
+	_e "github.com/magnus195/unipdf/v3/common";
+	_g "github.com/magnus195/unipdf/v3/core";_f "io";_c "math";);func (_bdb *PSParser )parseFunction ()(*PSProgram ,error ){_fab ,_ :=_bdb ._gce .ReadByte ();
 if _fab !='{'{return nil ,_a .New ("\u0069\u006ev\u0061\u006c\u0069d\u0020\u0066\u0075\u006e\u0063\u0074\u0069\u006f\u006e");};_faba :=NewPSProgram ();for {_bdb .skipSpaces ();_bdb .skipComments ();_ege ,_fafed :=_bdb ._gce .Peek (2);if _fafed !=nil {if _fafed ==_f .EOF {break ;
 };return nil ,_fafed ;};_e .Log .Trace ("\u0050e\u0065k\u0020\u0073\u0074\u0072\u0069\u006e\u0067\u003a\u0020\u0025\u0073",string (_ege ));if _ege [0]=='}'{_e .Log .Trace ("\u0045\u004f\u0046 \u0066\u0075\u006e\u0063\u0074\u0069\u006f\u006e");_bdb ._gce .ReadByte ();
 break ;}else if _ege [0]=='{'{_e .Log .Trace ("\u0046u\u006e\u0063\u0074\u0069\u006f\u006e!");_ebbge ,_dcbe :=_bdb .parseFunction ();if _dcbe !=nil {return nil ,_dcbe ;};_faba .Append (_ebbge );}else if _g .IsDecimalDigit (_ege [0])||(_ege [0]=='-'&&_g .IsDecimalDigit (_ege [1])){_e .Log .Trace ("\u002d>\u004e\u0075\u006d\u0062\u0065\u0072!");

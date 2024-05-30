@@ -10,7 +10,9 @@
 // terms that can be accessed at https://unidoc.io/eula/
 
 // Package fdf provides support for loading form field data from Form Field Data (FDF) files.
-package fdf ;import (_ee "bufio";_fa "bytes";_e "encoding/hex";_g "errors";_fb "fmt";_c "github.com/unidoc/unipdf/v3/common";_b "github.com/unidoc/unipdf/v3/core";_ea "io";_ff "os";_fd "regexp";_a "sort";_gb "strconv";_f "strings";);func (_fgf *fdfParser )parseArray ()(*_b .PdfObjectArray ,error ){_cbc :=_b .MakeArray ();
+package fdf ;import (_ee "bufio";_fa "bytes";_e "encoding/hex";_g "errors";_fb "fmt";
+	_c "github.com/magnus195/unipdf/v3/common";
+	_b "github.com/magnus195/unipdf/v3/core";_ea "io";_ff "os";_fd "regexp";_a "sort";_gb "strconv";_f "strings";);func (_fgf *fdfParser )parseArray ()(*_b .PdfObjectArray ,error ){_cbc :=_b .MakeArray ();
 _fgf ._abfb .ReadByte ();for {_fgf .skipSpaces ();_ecb ,_dac :=_fgf ._abfb .Peek (1);if _dac !=nil {return _cbc ,_dac ;};if _ecb [0]==']'{_fgf ._abfb .ReadByte ();break ;};_aee ,_dac :=_fgf .parseObject ();if _dac !=nil {return _cbc ,_dac ;};_cbc .Append (_aee );
 };return _cbc ,nil ;};func (_cdf *fdfParser )parse ()error {_cdf ._ba .Seek (0,_ea .SeekStart );_cdf ._abfb =_ee .NewReader (_cdf ._ba );for {_cdf .skipComments ();_cfea ,_bbe :=_cdf ._abfb .Peek (20);if _bbe !=nil {_c .Log .Debug ("\u0045\u0052\u0052\u004f\u0052\u003a\u0020\u0046\u0061\u0069\u006c\u0020\u0074\u006f\u0020r\u0065a\u0064\u0020\u0069\u006e\u0064\u0069\u0072\u0065\u0063\u0074\u0020\u006f\u0062\u006a");
 return _bbe ;};if _f .HasPrefix (string (_cfea ),"\u0074r\u0061\u0069\u006c\u0065\u0072"){_cdf ._abfb .Discard (7);_cdf .skipSpaces ();_cdf .skipComments ();_daca ,_ :=_cdf .parseDict ();_cdf ._ffb =_daca ;break ;};_eeg :=_ebc .FindStringSubmatchIndex (string (_cfea ));

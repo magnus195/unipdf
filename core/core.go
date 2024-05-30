@@ -12,9 +12,18 @@
 // Package core defines and implements the primitive PDF object types in golang, and provides functionality
 // for parsing those from a PDF file stream. This includes I/O handling, cross references, repairs, encryption,
 // encoding and other core capabilities.
-package core ;import (_ag "bufio";_fcc "bytes";_gb "compress/lzw";_dg "compress/zlib";_cd "crypto/md5";_cc "crypto/rand";_df "encoding/hex";_c "errors";_ba "fmt";_ad "github.com/unidoc/unipdf/v3/common";_cda "github.com/unidoc/unipdf/v3/core/security";
-_agf "github.com/unidoc/unipdf/v3/core/security/crypt";_af "github.com/unidoc/unipdf/v3/internal/ccittfax";_fd "github.com/unidoc/unipdf/v3/internal/imageutil";_ff "github.com/unidoc/unipdf/v3/internal/jbig2";_fg "github.com/unidoc/unipdf/v3/internal/jbig2/bitmap";
-_ee "github.com/unidoc/unipdf/v3/internal/jbig2/decoder";_e "github.com/unidoc/unipdf/v3/internal/jbig2/document";_fgb "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_bdc "github.com/unidoc/unipdf/v3/internal/strutils";_aa "golang.org/x/image/tiff/lzw";
+package core ;import (_ag "bufio";_fcc "bytes";_gb "compress/lzw";_dg "compress/zlib";_cd "crypto/md5";_cc "crypto/rand";_df "encoding/hex";_c "errors";_ba "fmt";
+	_ad "github.com/magnus195/unipdf/v3/common";
+	_cda "github.com/magnus195/unipdf/v3/core/security";
+	_agf "github.com/magnus195/unipdf/v3/core/security/crypt";
+	_af "github.com/magnus195/unipdf/v3/internal/ccittfax";
+	_fd "github.com/magnus195/unipdf/v3/internal/imageutil";
+	_ff "github.com/magnus195/unipdf/v3/internal/jbig2";
+	_fg "github.com/magnus195/unipdf/v3/internal/jbig2/bitmap";
+	_ee "github.com/magnus195/unipdf/v3/internal/jbig2/decoder";
+	_e "github.com/magnus195/unipdf/v3/internal/jbig2/document";
+	_fgb "github.com/magnus195/unipdf/v3/internal/jbig2/errors";
+	_bdc "github.com/magnus195/unipdf/v3/internal/strutils";_aa "golang.org/x/image/tiff/lzw";
 _cg "golang.org/x/xerrors";_bdf "image";_gc "image/color";_be "image/jpeg";_gf "io";_fc "io/ioutil";_f "os";_db "reflect";_g "regexp";_fe "sort";_a "strconv";_abb "strings";_b "sync";_ab "time";_bd "unicode";);
 
 // MakeDecodeParams makes a new instance of an encoding dictionary based on
